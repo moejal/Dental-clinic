@@ -1,0 +1,942 @@
+@import "tailwindcss";
+
+/*Scrollbar*/
+/* تصميم Scrollbar لمتصفح كروم، إيدج وسفاري */
+::-webkit-scrollbar {
+  width: 12px;
+  /* سمك السكروول */
+}
+
+::-webkit-scrollbar-track {
+  background: #e0e0e0;
+  /* لون المسار */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #90caf9;
+  /* لون المقبض */
+  border-radius: 10px;
+  border: 3px solid #e0e0e0;
+  /* يعطي مساحة بين المقبض والمسار */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #42a5f5;
+  /* لون عند المرور بالماوس */
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #90caf9 #e0e0e0;
+}
+
+/*Scrollbar*/
+
+
+
+/*HEADER FOR ALL*/
+
+/* --------------------------
+ Navbar ريسبونسف
+--------------------------- */
+.navbar-brand .logo {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.navbar-brand .logo-text {
+  font-size: 1rem;
+}
+
+nav {
+  background-color: #3F72AF;
+}
+
+.logo {
+  margin: 15px;
+  margin-left: 21px;
+}
+
+#navbarNav {
+  margin-right: 23px;
+}
+
+.nav-link:hover {
+  text-decoration: underline solid 3px #3D91EA;
+}
+
+/*END HEADER for all*/
+
+/*MAIN*/
+
+/*index1*/
+
+/*section 1*/
+
+.cover {
+  background-image: url("../img/cover.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 450px;
+  color: #F9F7F7;
+  position: relative;
+  /* عشان نقدر نحط الصورة فوقها */
+  display: flex;
+  align-items: center;
+  padding: 0 60px;
+}
+
+.cover::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  /* ظل لتحسين وضوح النص */
+  z-index: 0;
+}
+
+.p1-right {
+  position: relative;
+  max-width: 500px;
+  z-index: 2;
+  /* فوق الخلفية والصورة */
+}
+
+/* الصورة على اليمين فوق الخلفية */
+.img-over {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  max-width: 50%;
+  /* تمنع تغطية النص */
+  object-fit: contain;
+  z-index: 1;
+  /* فوق الخلفية وتحت النص */
+}
+
+.btnR {
+  color: #F9F7F7;
+  text-decoration: none;
+  background-color: #3F72AF;
+  padding: 0;
+  border: 2px solid #3F72AF;
+  border-radius: 100px;
+  display: inline-block;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+  width: 160px;
+  height: 40px;
+}
+
+.btnR:hover {
+  background-color: #112D4E;
+  border: 2px solid #112D4E;
+  padding: 0;
+  text-align: center;
+  width: 179px;
+  height: 45px;
+
+}
+
+/*END section 1*/
+
+/*section 2*/
+.card-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  padding: 1rem;
+  scroll-behavior: smooth;
+}
+
+.card {
+  min-width: 250px;
+  flex: 0 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+  background: #fff;
+
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-title {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 22px;
+  color: #3D91EA;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  font-size: 14;
+  font-weight: bold;
+
+}
+
+.feature i {
+  color: green;
+  margin-right: 0.5rem;
+
+}
+
+.price {
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: left;
+  color: #112D4E;
+
+}
+
+.card-footer {
+  border-top: 2px dashed #ccc;
+  padding: 1rem 1.5rem 1.5rem 1.5rem;
+}
+
+
+
+
+
+/* Hide scrollbar */
+/* .card-container::-webkit-scrollbar { display: none; }*/
+
+/*.card-container { -ms-overflow-style: none; scrollbar-width: none; }*/
+
+/*END section 2*/
+
+
+/*section 3*/
+.img-about {
+  margin-left: 70px;
+  height: 475px;
+  width: 350px;
+}
+
+.sec3-right {
+  margin-right: 50px;
+  margin-top: 90px;
+  text-align: right;
+}
+
+.txt-right-sec3 {
+  font-weight: bold;
+  font-size: 17px;
+  margin-top: 40px;
+}
+
+/*END section 3*/
+
+/*section4*/
+
+/* يخلي الكرت في النص */
+/* يخلي الكرت في النص */
+.sec4 {
+  display: flex;
+  justify-content: center;
+  /* أفقي */
+  align-items: center;
+  /* عمودي */
+  height: 100vh;
+  /* طول الشاشة */
+  background: #f8f9fa;
+  /* خلفية فاتحة */
+}
+
+.card-res {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px 25px;
+  width: 500px;
+  /* عرض أكبر */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-res h3 {
+  margin: 0 0 15px 0;
+  font-size: 18px;
+  color: #112D4E;
+  /* اللون الأساسي */
+}
+
+.card-res ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card-res li {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  color: #333;
+  border-radius: 6px;
+  /* يخلي الحواف ناعمة وقت الهوفر */
+  transition: all 0.3s ease;
+  /* سلاسة */
+}
+
+.card-res li:hover {
+  background: #112D4E;
+  /* يغطي الخلفية */
+  color: #fff;
+  /* يخلي النص أبيض */
+}
+
+.card-res li:last-child {
+  border-bottom: none;
+}
+
+/*END section4*/
+
+/*  Responsive Design index1 */
+
+/* --- لحد 992px (تابلت) --- */
+@media (max-width: 992px) {
+
+  /* الغلاف */
+  .cover {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+    min-height: auto;
+  }
+
+  .p1-right {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .img-over {
+    position: relative;
+    max-width: 70%;
+    height: auto;
+    margin: 20px auto 0 auto;
+  }
+
+  /* الكروت */
+  .card-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card {
+    width: 45%;
+    min-width: unset;
+    margin-bottom: 20px;
+  }
+
+  /* عن الدكتور */
+  .img-about {
+    margin: 20px auto;
+    display: block;
+    width: 70%;
+    height: auto;
+  }
+
+  .sec3-right {
+    margin: 20px;
+    text-align: center;
+  }
+
+  /* الحجز */
+  .sec4 {
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .card-res {
+    width: 90%;
+    margin: auto;
+  }
+
+  /* الفوتر */
+  .foot {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+    min-height: auto;
+  }
+
+  .foot .logo {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+/* --- لحد 768px (موبايل متوسط) --- */
+@media (max-width: 768px) {
+
+  h1,
+  h3 {
+    font-size: 20px;
+  }
+
+  .btnR {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+
+  .card {
+    width: 80%;
+  }
+
+  .txt-right-sec3 {
+    font-size: 15px;
+  }
+
+  .card-res h3 {
+    font-size: 16px;
+  }
+}
+
+/* --- لحد 576px (موبايل صغير) --- */
+@media (max-width: 576px) {
+
+  h1,
+  h3 {
+    font-size: 18px;
+  }
+
+  .cover {
+    padding: 20px 10px;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .txt-right-sec3 {
+    font-size: 14px;
+  }
+
+  .card-res {
+    width: 100%;
+    padding: 15px;
+  }
+}
+
+/*END RESPONCEV INDEX1 */
+
+/*END index1*/
+
+
+/* index2*/
+.sec2-about h3 {
+  color: #3D91EA;
+  text-align: right;
+  font-weight: bold;
+  margin-top: 50px;
+  margin-right: 50px;
+}
+
+.sec2-about p {
+  font-weight: bold;
+  text-align: right;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+.sec2-about ul {
+  font-weight: bold;
+  text-align: right;
+  margin-right: 50px;
+  margin-left: 50px;
+  padding-left: 0;
+  list-style-position: inside;
+}
+
+/* --------------------------
+ الصور
+--------------------------- */
+.sec1-about img {
+  width: 100%;
+  height: auto;
+}
+
+
+/* ==========================
+ Responsive of index2
+ ========================== */
+
+/* أجهزة التابلت الكبيرة */
+@media (max-width: 992px) {
+
+  .sec2-about h3,
+  .sec2-about p,
+  .sec2-about ul {
+    margin-left: 30px !important;
+    margin-right: 30px !important;
+  }
+}
+
+/* أجهزة التابلت الصغيرة */
+@media (max-width: 768px) {
+
+  .sec2-about h3,
+  .sec2-about p,
+  .sec2-about ul {
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+    font-size: 0.95rem;
+  }
+
+  .navbar-brand .logo-text {
+    font-size: 0.95rem;
+  }
+}
+
+/* الهواتف */
+@media (max-width: 576px) {
+  .sec2-about h3 {
+    font-size: 1.2rem;
+    margin-top: 30px;
+  }
+
+  .sec2-about p,
+  .sec2-about ul {
+    font-size: 0.9rem;
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+  }
+
+  footer .logo a {
+    font-size: 0.85rem;
+    flex-wrap: wrap;
+
+  }
+
+  footer .logo a img {
+    margin-bottom: 3px;
+
+  }
+
+  .navbar-brand .logo-text {
+    font-size: 0.9rem;
+  }
+}
+
+/*END Responsive of index2*/
+
+/*END index2*/
+
+/*index3*/
+/*section-reserv1*/
+.sec-reserv-text {
+  margin-top: 30px;
+  margin-right: 100px;
+  margin-left: 350px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+
+.arrows {
+  position: absolute;
+  /* لتثبيت موقع الأسطر داخل الزر */
+  right: 10px;
+  /* المسافة من جهة اليمين */
+  top: 50%;
+  /* محاذاة منتصف الزر عموديًا */
+  transform: translateY(-50%);
+  /* لضبط منتصف العمود */
+  display: flex;
+  flex-direction: column;
+  /* ترتيب الأسهم عموديًا */
+  gap: 2px;
+  /* مسافة بسيطة بين الأسهم */
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-left: 150px;
+}
+
+#dropdownBtn {
+  color: #112D4E;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 1px solid #112D4E;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 448px;
+  height: 56px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.dropdown-content div {
+  color: black;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdown-content div:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
+}
+
+.highlight {
+  background-color: #3498db;
+  color: white;
+}
+
+#selectedOption {
+  position: absolute;
+  /* لتثبيت موقع الأسطر داخل الزر */
+  left: 15px;
+  /* المسافة من جهة اليمين */
+  top: 50%;
+  /* محاذاة منتصف الزر عموديًا */
+  transform: translateY(-50%);
+  /* لضبط منتصف العمود */
+  display: flex;
+  flex-direction: column;
+  /* ترتيب الأسهم عموديًا */
+  gap: 2px;
+}
+
+/*Responsive of reserv1 */
+/*حق النص الاولي */
+/*  ريسبونسف للموبايل */
+@media screen and (max-width: 600px) {
+  .sec-reserv-text {
+    padding: 10px;
+    margin: 15px;
+  }
+
+  .sec-reserv-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .sec-reserv-text p {
+    font-size: 0.95rem;
+  }
+}
+
+/* ريسبونسف للتابلت */
+@media screen and (max-width: 900px) {
+  .sec-reserv-text h2 {
+    font-size: 1.75rem;
+  }
+
+  .sec-reserv-text p {
+    font-size: 1rem;
+  }
+}
+
+/*حق النص الاولي */
+
+/*حق اختيار الخدمة*/
+
+/* ريسبونسف للشاشات الصغيرة */
+/* للشاشات الكبيرة (الوضع الافتراضي) */
+.dropdown {
+  width: 450px; /* الحجم الأساسي */
+  margin-left: 150px;
+}
+
+#dropdownBtn {
+  width: 100%;
+  height: 56px;
+  font-size: 16px;
+  padding: 10px 20px;
+}
+
+.dropdown-content {
+  width: 100%;
+}
+
+/* للشاشات المتوسطة (تابلت) */
+@media screen and (max-width: 768px) {
+  .dropdown {
+    width: 90%;              /* ياخذ 90% من العرض */
+    margin: 0 auto;          /* يتوسّط */
+  }
+
+  #dropdownBtn {
+    font-size: 14px;
+    height: 50px;
+    padding: 8px 15px;
+  }
+
+  #selectedOption {
+    left: 10px;
+    font-size: 14px;
+  }
+
+  .arrows {
+    right: 10px;
+  }
+
+  .dropdown-content {
+    width: 100%;
+  }
+
+  .dropdown-content .option {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .dropdown-label {
+    display: block;
+    margin: 0 auto 8px auto;
+    text-align: right;
+    width: 90%;
+    font-size: 14px;
+  }
+}
+
+/* ريسبونسف للموبايل (شاشات صغيرة جدًا) */
+@media screen and (max-width: 480px) {
+  .dropdown {
+    width: 95%; /* أصغر شوي من الشاشة */
+  }
+
+  #dropdownBtn {
+    font-size: 13px;
+    height: 45px;
+    padding: 6px 12px;
+  }
+
+  #selectedOption {
+    font-size: 13px;
+  }
+
+  .dropdown-content .option {
+    font-size: 13px;
+    padding: 6px;
+  }
+
+  .dropdown-label {
+    font-size: 13px;
+    width: 95%;
+  }
+}
+
+
+/*حق اختيار الخدمة*/
+
+/*END Responsive of reserv1 */
+
+/*END section-reserv1*/
+
+/*section-reserv2*/
+.serc-reserv2 {
+  margin-top: 30px;
+}
+
+.reservation-form {
+  max-width: 400px;
+  width: 90%; /* العرض بالنسبة للشاشات الصغيرة */
+  margin: 20px auto;
+  margin-bottom: -75px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.reservation-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;        /* ✅ مرن */
+  max-width: 400px;   /* ✅ حد أقصى */
+  margin: 0 auto;     /* ✅ توسيط */
+  padding: 10px 0;
+  border-radius: 8px;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.form-group input[type="date"],
+.form-group select {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #112D4E;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;   /* ✅ يأخذ كل العرض */
+  box-sizing: border-box;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #217dbb;
+}
+
+/* ريسبونسف للشاشات المتوسطة */
+@media screen and (max-width: 768px) {
+  .reservation-form {
+    padding: 15px;
+  }
+
+  .reservation-form h2 {
+    font-size: 1.6rem;
+  }
+
+  .form-group {
+    max-width: 100%; /* ✅ تاخذ كل الشاشة */
+  }
+
+  .form-group label,
+  .form-group input[type="date"],
+  .form-group select,
+  button[type="submit"] {
+    font-size: 0.95rem;
+  }
+}
+
+/* ريسبونسف للموبايل */
+@media screen and (max-width: 480px) {
+  .reservation-form {
+    padding: 10px;
+  }
+
+  .reservation-form h2 {
+    font-size: 1.4rem;
+  }
+
+  .form-group label,
+  .form-group input[type="date"],
+  .form-group select,
+  button[type="submit"] {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}
+
+/*section-reserv2*/
+
+
+/*section-reserv3*/
+.text-boxes {
+  
+  display: flex;
+  flex-direction: column;
+  width: 367px;
+  gap: 30px;
+  text-align: left;
+  margin-left: 170px ;
+  
+  
+}
+/* ✅ ريسبونسف للأجهزة الصغيرة */
+@media screen and (max-width: 768px) {
+  .form-label {
+    margin-left: 0;
+    text-align: right;
+  }
+
+  .text-boxes {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .form-label {
+    font-size: 0.95rem;
+  }
+
+  .text-boxes input,
+  .text-boxes textarea {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .btnR {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}
+
+/*section-reserv3*/
+
+/*END index3*/
+
+
+/*END MAIN*/
+
+/*FOOTER FOR ALL*/
+
+.foot {
+  background-image: url("../img/cover.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 450px;
+  color: #F9F7F7;
+  position: relative;
+  /* عشان نقدر نحط الصورة فوقها */
+  display: flex;
+  align-items: center;
+  padding: 0 60px;
+
+
+}
+
+/* --------------------------
+ الفوتر ريسبونسف
+--------------------------- */
+footer .logo a {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  text-decoration: none;
+  color: #F9F7F7;
+}
+
+footer .logo a img {
+  margin-right: 5px;
+}
+
+/*END FOOTER*/

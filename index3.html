@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <title>عيادة مصاقع لطب وتجميل الاسنان</title>
+</head>
+
+<body>
+    <!--HEADER-->
+    <nav class="navbar navbar-expand-md navbar-dark" style="background:#3F72AF;">
+        <a class="navbar-brand" href="#">
+            <div style="display: flex; flex-direction: row;">
+                <img class="logo" src="./src/img/icon.png" alt="logo">
+                <span style="margin-top:20px ;" class="logo-text">عيادة مصاقع لطب وتجميل الأسنان</span>
+            </div>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="القائمة">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index3.html">الحجز</a></li>
+                <li class="nav-item"><a class="nav-link" href="index2.html">عن المركز</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#dr.about">عن الدكتور</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!--HEADER-->
+
+    <!--MAIN-->
+    <section class="sec-reserv1">
+        <div dir="rtl" class="sec-reserv-text">
+            <h2>احجز موعد</h2>
+            <p>
+                مرحبًا بك! لحجز موعدك، يُرجى اتباع الخطوات التالية: اختر الخدمة التي ترغب بها، ثم حدد التاريخ والوقت
+                المناسبين، وأدخل معلومات الاتصال الخاصة بك. نحن نتطلع لرؤيتك قريبًا!
+            </p>
+        </div>
+
+        <br><br>
+
+        <div>
+            <label dir="rtl" for="dropdownBtn" style=" font-size: medium; font-weight: bold; margin-left: 150px;">1.اختر
+                الخدمه </label>
+        </div>
+        <div class="dropdown">
+            <button id="dropdownBtn">
+                <span id="selectedOption">أختر الخدمة التي تريدها</span>
+                <div class="arrows">
+                    <span class="arrow" id="upArrow">▲</span>
+                    <span class="arrow" id="downArrow">▼</span>
+                </div>
+            </button>
+            <div id="dropdownMenu" class="dropdown-content">
+                <div class="option">تبييض</div>
+                <div class="option">تصفيه</div>
+                <div class="option">التقويم</div>
+                <div class="option">اصلاح الكسور</div>
+                <div class="option">اصلاح الفراغات</div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="serc-reserv2">
+        <div>
+            <label dir="rtl" style=" font-size: medium; font-weight: bold; margin-left: 150px;">2.اختر
+                الوقت والتاريخ </label>
+        </div>
+        <div class="reservation-form">
+
+            <!-- اختيار التاريخ -->
+            <div class="form-group">
+                <label for="appointmentDate">اختر التاريخ:</label>
+                <input type="date" id="appointmentDate" name="appointmentDate">
+            </div>
+
+            <!-- اختيار الوقت -->
+            <div class="form-group">
+                <label for="appointmentTime">اختر الوقت:</label>
+                <select id="appointmentTime" name="appointmentTime">
+                    <option value="" disabled selected hidden>اختر الوقت</option>
+                    <option value="08:00">08:00 صباحًا</option>
+                    <option value="09:00">09:00 صباحًا</option>
+                    <option value="10:00">10:00 صباحًا</option>
+                    <option value="11:00">11:00 صباحًا</option>
+                    <option value="12:00">12:00 ظهرًا</option>
+                    <option value="13:00">01:00 عصرًا</option>
+                    <option value="14:00">02:00 عصرًا</option>
+                    <option value="15:00">03:00 عصرًا</option>
+                    <option value="16:00">04:00 عصرًا</option>
+                    <option value="17:00">05:00 مساءً</option>
+                    <option value="18:00">06:00 مساءً</option>
+                    <option value="19:00">07:00 مساءً</option>
+
+                </select>
+            </div>
+        </div>
+        </div>
+
+    </section>
+
+    <section class="serc-reserv3">
+        <br><br><br>
+        <div>
+            <label dir="rtl" style=" font-size: medium; font-weight: bold; margin-left: 170px;">3.معلوماتك</label>
+        </div>
+        <div class="text-boxes">
+            <input type="text" placeholder="الاسم الكامل">
+            <input type="email" placeholder="E-mail">
+            <input type="text" placeholder="رقم الهاتف">
+            <input style="height: 144px;" type="text" placeholder="معلومات عن الحاله(اختياري)">
+
+            <div style="margin-left: 100px; margin-top: -30px;">
+                <a href="#" onclick="alert('تم الحجز بنجاح')"><button class="btn btn-primary btnR">حجز الآن</button></a>
+            </div>
+        </div>
+
+    </section>
+
+    <!--MAIN-->
+
+
+
+    <!--FOOTER-->
+    <br><br>
+    <footer class="foot">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10">
+                    <div class="left-footer">
+                        <h4>صفحاتنا</h4>
+                        <div class="logo">
+                            <a href="www.Facebook.com"><img src="./src/img/facebook.png" alt="#">&nbsp;Facebook</a>
+                            <a href="www.Instagram.conm"><img src="./src/img/insta.png" alt="#"> &nbsp;Instagram</a>
+                            <a href="www.tiktok.com"><img src="./src/img/tiktok.png" alt="#">&nbsp;Tiktok</a>
+                            <a href="www.x.com"><img style="height: 20px; height: 20px;" src="./src/img/X.png"
+                                    alt="#">&nbsp;X</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="right-footer">
+                        <h4>تواصل بنا</h4>
+                        <div class="logo">
+                            <a href="#"><img src="./src/img/carbon_location.png" alt="#"
+                                    style="height: 20px; width: 20px;">اليمن/الديس الشرقية</a>
+                            <a href="#"><img src="./src/img/phone.png" alt="#"
+                                    style="height: 20px; width: 20px;">777777777</a>
+                            <a href="#"><img src="./src/img/carbon_email.png" alt="#"
+                                    style="height: 20px; width: 20px;">@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--FOOTER-->
+
+
+    <script src="./src/js/bootstrap.bundle.min.js"></script>
+    <script src="./src/js/script.js"></script>
+</body>
+
+</html>
