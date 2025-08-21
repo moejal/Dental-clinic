@@ -1018,22 +1018,7 @@ footer .logo a {
   
 }
 
-/* شاشات صغيرة - أقل من 768px */
-@media screen and (max-width: 780px) {
-  .foot {
-    padding: 0 30px;
-    min-height: 200px;
-  }
-  
-}
 
-/* شاشات الهواتف الصغيرة - أقل من 480px */
-@media screen and (max-width: 480px) {
-  .foot {
-    padding: 0 20px;
-    min-height: 250px;
-  }
-}
 
 
 /*END FOOTER*/
