@@ -1,3 +1,4 @@
+//index 3
 const btn = document.getElementById('dropdownBtn');
   const selected = document.getElementById('selectedOption');
   const menu = document.getElementById('dropdownMenu');
@@ -49,3 +50,4 @@ const btn = document.getElementById('dropdownBtn');
   });
 
   updateSelection(); // تهيئة العرض الأولي
+  //end of index 3

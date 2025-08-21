@@ -41,9 +41,12 @@
 /* --------------------------
  Navbar ريسبونسف
 --------------------------- */
+
 .navbar-brand .logo {
   height: 40px;
   margin-right: 10px;
+  max-width: 100%;  /* يخلي الشعار مرن */
+  height: auto;     /* يحافظ على النسبة */
 }
 
 .navbar-brand .logo-text {
@@ -66,6 +69,28 @@ nav {
 .nav-link:hover {
   text-decoration: underline solid 3px #3D91EA;
 }
+
+/* ===== ريسبونسف للشاشات الصغيرة ===== */
+@media (max-width: 768px) {
+  nav {
+    text-align: center; /* يخلي كل شيء يتمركز */
+  }
+
+
+  #navbarNav {
+    margin: 0 auto;        /* يخلي عناصر القائمة تتوسط */
+  }
+
+  .nav-link {
+    display: block;
+    margin: 5px 0;         /* مسافة بين الروابط */
+  }
+}
+
+ 
+  
+
+
 
 /*END HEADER for all*/
 
@@ -371,11 +396,15 @@ nav {
     padding: 40px 20px;
     min-height: auto;
   }
-
+  #left{
+    padding-top: 60px;
+  }
   .foot .logo {
+    
     flex-direction: row;
     justify-content: center;
   }
+  
 }
 
 /* --- لحد 768px (موبايل متوسط) --- */
@@ -402,6 +431,7 @@ nav {
   .card-res h3 {
     font-size: 16px;
   }
+  
 }
 
 /* --- لحد 576px (موبايل صغير) --- */
@@ -428,6 +458,7 @@ nav {
     width: 100%;
     padding: 15px;
   }
+  
 }
 
 /*END RESPONCEV INDEX1 */
@@ -498,6 +529,14 @@ nav {
   .navbar-brand .logo-text {
     font-size: 0.95rem;
   }
+  #left{
+    padding-top: 60px;
+  }
+  .foot .logo {
+    
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 
 /* الهواتف */
@@ -528,6 +567,7 @@ nav {
   .navbar-brand .logo-text {
     font-size: 0.9rem;
   }
+  
 }
 
 /*END Responsive of index2*/
@@ -927,16 +967,73 @@ button[type="submit"]:hover {
 /* --------------------------
  الفوتر ريسبونسف
 --------------------------- */
+
+
+footer .logo a img {
+  margin-right: 5px;
+}
+
 footer .logo a {
   display: flex;
   align-items: center;
+  flex-wrap: wrap; /* يسمح بلف العناصر إذا صغر العرض */
   margin-bottom: 5px;
   text-decoration: none;
   color: #F9F7F7;
 }
 
-footer .logo a img {
-  margin-right: 5px;
+
+
+/* للشاشات الصغيرة (موبايل) */
+@media (max-width: 600px) {
+  footer .logo a {
+    justify-content: center;  /* يجعلها في الوسط */
+    text-align: center;
+  }
+
+  footer .logo a img {
+    margin-right: 0;
+    margin-bottom: 5px; /* ينزل النص تحت اللوجو */
+    max-width: 70px;    /* يصغّر الشعار */
+  }
 }
+
+
+/* شاشات كبيرة - أقل من 1200px */
+@media screen and (max-width: 1200px) {
+  .foot {
+    padding: 0 50px;
+    min-height: 400px;
+  }
+}
+
+/* شاشات متوسطة - أقل من 992px */
+@media screen and (max-width: 992px) {
+  .foot {
+    padding: 0 40px;
+    min-height: 350px;
+    flex-direction: column;
+    
+  }
+  
+}
+
+/* شاشات صغيرة - أقل من 768px */
+@media screen and (max-width: 780px) {
+  .foot {
+    padding: 0 30px;
+    min-height: 200px;
+  }
+  
+}
+
+/* شاشات الهواتف الصغيرة - أقل من 480px */
+@media screen and (max-width: 480px) {
+  .foot {
+    padding: 0 20px;
+    min-height: 250px;
+  }
+}
+
 
 /*END FOOTER*/
